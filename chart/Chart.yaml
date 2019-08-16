@@ -1,0 +1,14 @@
+apiVersion: v1
+description: teamspeak
+engine: gotpl
+home: https://github.com/ksandermann/teamspeak-helm-chart
+keywords:
+- teamspeak
+maintainers:
+- email: kevin.sandermann@gmail.com
+  name: ksandermann
+name: teamspeak
+sources:
+- https://github.com/ksandermann/teamspeak-helm-chart
+version: 0.1.0
+appVersion: 3.9.1

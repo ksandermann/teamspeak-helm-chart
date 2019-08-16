@@ -1,6 +1,6 @@
 # Helm Chart for Teamspeak 3 Server
 
-[Teamspeak](https://www.teamspeak.com) voice and chat tool for teams providing voice channel features.
+[Teamspeak](https://www.teamspeak.com) is a voice and chat tool for teams providing voice channel features.
 
 ## TL;DR;
 
@@ -26,14 +26,14 @@ Recommended installation:
 kubectl config set-context $(kubectl config current-context) --namespace=default
 
 helm upgrade ts3 \
-    . \
+    ./chart \
     --install \
     --namespace default \
     -f values.yaml \
     --dry-run
 
 helm upgrade ts3 \
-    . \
+    ./chart \
     --install \
     --namespace default \
     -f values.yaml

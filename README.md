@@ -60,7 +60,7 @@ values.
 | Parameter                   | Description                                               | Default         |
 |-----------------------------|-----------------------------------------------------------|-----------------|
 | `image.repository`          | Image repository                                          | `teamspeak`     |
-| `image.tag`                 | Image tag                                                 | `3.9.1`         |
+| `image.tag`                 | Image tag                                                 | `3.12.0`        |
 | `image.pullPolicy`          | Image pull policy                                         | `Always`        |
 | `image.pullSecret`          | Specify image pull secrets                                | `nil`           |
 | `pod.annotations`           | Specify annotations for the pod                           | `nil`           |

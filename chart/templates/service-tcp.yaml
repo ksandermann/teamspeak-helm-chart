@@ -1,7 +1,8 @@
+{{- if and (.Values.service.tcp.enabled) (eq .Values.service.tcp.type "seperate")}}
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ .Release.Name }}-tcp
   labels:
     app: teamspeak
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
@@ -17,21 +18,15 @@ spec:
   loadBalancerIP: {{ .Values.service.ip }}
   {{- end }}
   ports:
-    - nodePort: {{ .Values.service.nodePort }}
-      targetPort: 9987
-      protocol: UDP
-      name: teamspeak-voice
-      port: 9987
-    {{- if and (.Values.service.tcp.enabled) (eq .Values.service.tcp.type "combined") }}
-    - name: teamspeak-filetransfer
-      port: 30033
-      targetPort: 30033
-      protocol: UDP
-    - name: teamspeak-serverquery
-      port: 10011
-      targetPort: 10011
-      protocol: UDP
-    {{- end}}
+  - name: teamspeak-filetransfer
+    port: 30033
+    protocol: TCP
+    targetPort: 30033
+  - name: teamspeak-serverquery
+    port: 10011
+    protocol: TCP
+    targetPort: 10011
   selector:
     app: teamspeak
     release: {{ .Release.Name }}
+{{- end }}

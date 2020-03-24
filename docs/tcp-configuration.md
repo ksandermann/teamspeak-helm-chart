@@ -1,6 +1,6 @@
 # TCP Configuration
-This chart currently has limited support for TCP ports. See [Known Limitations](#known-limitations)  
-[Check]((https://github.com/janosi/enhancements/blob/mixedprotocollb/keps/sig-network/20200103-mixed-protocol-lb.md#implementation-detailsnotesconstraints)) if your enviorment supports `mixed protocols`.
+This chart currently has limited support for TCP ports. See [Known Limitations](../README.md#known-limitations)  
+[Check](https://github.com/janosi/enhancements/blob/mixedprotocollb/keps/sig-network/20200103-mixed-protocol-lb.md#implementation-detailsnotesconstraints) if your enviorment supports `mixed protocols`.
 
 ## How to Enable TCP
  * Set `service.tcp.enabled` to `true` in the configuration option; and
